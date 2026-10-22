@@ -1,0 +1,64 @@
+<!-- 1. Mobile-First Media Query: Header stacks vertically on mobile, becomes a row at 768px (Section 9.1) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1. Mobile-First Media Query Demo</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f9; }
+
+    /* STEP 1: Mobile-First Base Style (Applies to narrow screens < 768px) */
+    header {
+      display: flex;
+      flex-direction: column; /* Stacked vertically on mobile phones! */
+      gap: 15px;
+      background-color: #1e293b;
+      color: white;
+      padding: 20px 30px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* STEP 2: Media Query for Tablets & Desktops (768px and wider) */
+    @media (min-width: 768px) {
+      header {
+        flex-direction: row;            /* Switches to horizontal row! */
+        align-items: center;            /* Centers items vertically */
+        justify-content: space-between; /* Pushes Title to left, Nav links to right */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2 style="margin: 0;">RVCE Skill Lab</h2>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#courses">Courses</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div style="padding: 30px;">
+    <h2>Mobile-First Media Query (<code>@media (min-width: 768px)</code>)</h2>
+    <p><strong>Try resizing this browser window!</strong></p>
+    <ul>
+      <li><strong>Below 768px (Mobile):</strong> The header uses <code>flex-direction: column;</code> so the title and navigation links stack vertically.</li>
+      <li><strong>768px and wider (Tablet/Desktop):</strong> The <code>@media (min-width: 768px)</code> rule activates and switches the header to <code>flex-direction: row;</code> with <code>justify-content: space-between;</code>!</li>
+    </ul>
+  </div>
+
+</body>
+</html>

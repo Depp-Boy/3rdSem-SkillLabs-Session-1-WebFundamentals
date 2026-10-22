@@ -1,0 +1,214 @@
+/* =========================================================
+   1. UNIVERSAL BOX-SIZING & BASE ELEMENT SELECTORS
+   ========================================================= */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f6f9;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+/* Responsive Image Rule */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Flexible Centered Container */
+.container {
+  width: 92%;
+  max-width: 1200px;
+  margin: 25px auto;
+}
+
+/* =========================================================
+   2. MOBILE-FIRST HEADER & NAVIGATION (FLEXBOX)
+   ========================================================= */
+header {
+  display: flex;
+  flex-direction: column; /* Stacked vertically on mobile screens */
+  gap: 15px;
+  background-color: #0f172a;
+  color: white;
+  padding: 20px 4%;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+/* Pseudo-class Selector (:hover & :focus) for Navigation Links */
+nav a:hover,
+nav a:focus {
+  background-color: #38bdf8;
+  color: #0f172a;
+}
+
+/* =========================================================
+   3. SECTIONS & FLEXBOX CARDS (BOX MODEL + POSITIONING)
+   ========================================================= */
+.section-box {
+  background-color: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+.profile-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile-img {
+  width: 100%;
+  max-width: 280px;
+}
+
+/* Flexbox Container for the 3 Course Cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Flex Item Card with position: relative for the badge */
+.card {
+  position: relative;
+  flex: 1 1 260px;
+  background-color: #f8fafc;
+  padding: 20px;
+  border: 2px solid #cbd5e1;
+  border-radius: 8px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+/* Pseudo-class :hover on Cards */
+.card:hover {
+  border-color: #2563eb;
+  transform: translateY(-3px);
+}
+
+.badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: #dbeafe;
+  color: #1d4ed8;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+/* =========================================================
+   4. TABLE & FORM STYLING (ATTRIBUTE + PSEUDO-CLASS SELECTORS)
+   ========================================================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #cbd5e1;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #eff6ff;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+  width: 100%;
+  max-width: 450px;
+  padding: 10px;
+  border: 2px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+/* Pseudo-class :focus when user clicks inside an input box */
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #2563eb;
+  background-color: #f0f9ff;
+}
+
+.submit-btn {
+  padding: 12px 24px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #1d4ed8;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #0f172a;
+  color: #94a3b8;
+  margin-top: 30px;
+}
+
+/* =========================================================
+   5. MEDIA QUERY FOR TABLET & DESKTOP VIEWPORTS (>= 768px)
+   ========================================================= */
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .profile-layout {
+    flex-direction: row;
+    align-items: center;
+  }
+}

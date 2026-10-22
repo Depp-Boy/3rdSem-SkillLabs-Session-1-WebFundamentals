@@ -1,0 +1,62 @@
+<!-- 3. position: relative vs position: absolute (Section 9.3 of Manual) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3. position: relative vs position: absolute</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; }
+
+    /* Parent card has position: relative so it acts as the positioning anchor for the badge! */
+    .product-card {
+      position: relative;
+      width: 300px;
+      padding: 25px;
+      border: 2px solid #334155;
+      border-radius: 10px;
+      background-color: #f8fafc;
+      margin-bottom: 35px;
+    }
+
+    /* position: absolute removes the badge from normal flow and pins it to the top-right corner of .product-card */
+    .badge-absolute {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #ef4444;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    /* position: relative nudges an element from its normal spot without moving surrounding elements */
+    .nudge-relative {
+      position: relative;
+      top: 10px;
+      left: 20px;
+      background-color: #fde047;
+      padding: 10px;
+      border: 2px dashed #ca8a04;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <h2><code>position: relative</code> &amp; <code>position: absolute</code></h2>
+
+  <div class="product-card">
+    <span class="badge-absolute">NEW (Absolute)</span>
+    <h3>Full Stack Course</h3>
+    <p>The red <strong>NEW</strong> badge uses <code>position: absolute; top: 10px; right: 10px;</code> inside this parent card which has <code>position: relative;</code>.</p>
+  </div>
+
+  <h3>Standalone <code>position: relative</code> Demo:</h3>
+  <p>Normal element before.</p>
+  <div class="nudge-relative">I have <code>position: relative; top: 10px; left: 20px;</code> (nudged from my normal spot!)</div>
+  <p style="margin-top: 20px;">Normal element after (unaffected by the nudge!).</p>
+
+</body>
+</html>

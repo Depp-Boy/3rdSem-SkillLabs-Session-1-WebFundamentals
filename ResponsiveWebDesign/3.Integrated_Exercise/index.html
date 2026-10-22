@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Profile &amp; Responsive Course Webpage</title>
+  <!-- External Stylesheet linked using <link> -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Responsive Header & Navigation (Flexbox + Media Query) -->
+  <header>
+    <h1>Student Profile &amp; Course Portal</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#courses">Course Modules</a></li>
+        <li><a href="#schedule">Credits Table</a></li>
+        <li><a href="#contact">Register</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- Section 1: About Me with Responsive Image -->
+    <section id="about" class="section-box">
+      <h2>About Me</h2>
+      <div class="profile-layout">
+        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80" alt="Student coding on a laptop" class="profile-img">
+        <div>
+          <p>Hello! I am a 3rd-semester Computer Science &amp; Engineering student at RVCE. I am learning how to build structured HTML5 pages, style them with CSS3, and make them responsive across all screen sizes.</p>
+          <h3>Core Technical Skills</h3>
+          <ul>
+            <li>Semantic HTML5 Document Structure</li>
+            <li>CSS3 Selectors, Box Model &amp; Flexbox</li>
+            <li>Responsive Web Design &amp; Media Queries</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: At Least Three Cards Using Flexbox -->
+    <section id="courses" class="section-box">
+      <h2>Enrolled Skill Lab Modules (Flexbox Cards)</h2>
+      <div class="cards">
+        <article class="card">
+          <span class="badge">Module 1A</span>
+          <h3>HTML5 Fundamentals</h3>
+          <p>Build accessible page skeletons using headings, lists, tables, semantic tags, and validated forms.</p>
+        </article>
+
+        <article class="card">
+          <span class="badge">Module 1B</span>
+          <h3>CSS3 Styling &amp; Box Model</h3>
+          <p>Style reusable components using external stylesheets, class selectors, pseudo-classes, and border-box sizing.</p>
+        </article>
+
+        <article class="card">
+          <span class="badge">Module 1C</span>
+          <h3>Responsive Web Design</h3>
+          <p>Create adaptable Flexbox card rows and mobile-first media queries that work on phones, tablets, and desktops.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section 3: Tabular Data -->
+    <section id="schedule" class="section-box">
+      <h2>Semester Course Credits</h2>
+      <table>
+        <tr>
+          <th>Course Code</th>
+          <th>Course Name</th>
+          <th>Credits</th>
+        </tr>
+        <tr>
+          <td>23CS31</td>
+          <td>Full Stack Development Skill Lab</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>23CS32</td>
+          <td>Data Structures and Algorithms</td>
+          <td>4</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Section 4: Validated HTML5 Form with Hover & Focus Styling -->
+    <section id="contact" class="section-box">
+      <h2>Course Registration Form</h2>
+      <form action="https://httpbin.org/get" method="get">
+        <div class="form-group">
+          <label for="studentName">Full Name:</label>
+          <input type="text" id="studentName" name="name" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="studentEmail">Email Address:</label>
+          <input type="email" id="studentEmail" name="email" placeholder="student@rvce.edu.in" required>
+        </div>
+
+        <div class="form-group">
+          <label for="courseSelect">Select Elective Track:</label>
+          <select id="courseSelect" name="course">
+            <option value="fullstack">Full Stack Web Development</option>
+            <option value="ai">Artificial Intelligence &amp; ML</option>
+            <option value="iot">Internet of Things (IoT)</option>
+          </select>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Registration</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Department of Computer Science &amp; Engineering - Skill Lab Module 1</p>
+  </footer>
+
+</body>
+</html>

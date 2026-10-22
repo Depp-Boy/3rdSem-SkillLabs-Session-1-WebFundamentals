@@ -1,0 +1,53 @@
+<!-- 1. display: flex & flex-direction (row vs column) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>1. display: flex &amp; flex-direction</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 25px; }
+    .item {
+      background-color: #3b82f6;
+      color: white;
+      padding: 15px 25px;
+      margin: 5px;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    /* Flex Container 1: Row direction (Default) */
+    .flex-row {
+      display: flex;          /* Turns parent into a Flex Container */
+      flex-direction: row;    /* Arranges children side-by-side in a horizontal row */
+      background-color: #e2e8f0;
+      padding: 15px;
+      margin-bottom: 25px;
+    }
+
+    /* Flex Container 2: Column direction */
+    .flex-column {
+      display: flex;
+      flex-direction: column; /* Stacks children vertically in a column */
+      background-color: #e2e8f0;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>1. <code>display: flex</code> with <code>flex-direction: row</code> (Default)</h2>
+  <div class="flex-row">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+  </div>
+
+  <h2>2. <code>display: flex</code> with <code>flex-direction: column</code></h2>
+  <div class="flex-column">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+  </div>
+
+</body>
+</html>

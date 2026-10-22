@@ -1,0 +1,54 @@
+<!-- 4. flex-wrap, gap, and flex: 1 1 260px (Section 8 of Manual) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4. Responsive Flexbox Cards (flex-wrap, gap, flex)</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; margin: 25px; background: #f8fafc; }
+
+    /* Exact code from Section 8 of the Skill Lab Manual */
+    .cards {
+      display: flex;
+      flex-wrap: wrap; /* Allows cards to wrap onto a new line when screen gets narrow */
+      gap: 20px;       /* Creates consistent 20px spacing between rows and columns */
+    }
+
+    /* flex: <flex-grow> <flex-shrink> <flex-basis>
+       1 = can grow to fill extra space
+       1 = can shrink if needed
+       260px = ideal starting width before wrapping to a new line */
+    .card {
+      flex: 1 1 260px;
+      background-color: white;
+      border: 2px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Flexbox Card Layout (<code>flex-wrap: wrap</code>, <code>gap: 20px</code>, <code>flex: 1 1 260px</code>)</h2>
+  <p>Resize your browser window! When a row cannot fit multiple 260px cards, they automatically wrap onto the next line.</p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Card 1: HTML5</h3>
+      <p>Structures webpage content using semantic elements, headings, lists, tables, and forms.</p>
+    </div>
+    <div class="card">
+      <h3>Card 2: CSS3</h3>
+      <p>Controls presentation, colors, typography, the Box Model, and reusable styling rules.</p>
+    </div>
+    <div class="card">
+      <h3>Card 3: Responsive Design</h3>
+      <p>Adapts layouts smoothly to mobile, tablet, and desktop screens using Flexbox and media queries.</p>
+    </div>
+  </div>
+
+</body>
+</html>

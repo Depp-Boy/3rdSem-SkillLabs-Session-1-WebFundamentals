@@ -1,0 +1,55 @@
+<!-- 2. display: none vs visibility: hidden (Section 9.3 of Manual) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>2. display: none vs visibility: hidden</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 25px; }
+    .row {
+      display: flex;
+      gap: 15px;
+      background-color: #f1f5f9;
+      padding: 15px;
+      border: 2px solid #cbd5e1;
+      margin-bottom: 25px;
+    }
+    .box {
+      background-color: #3b82f6;
+      color: white;
+      padding: 20px;
+      font-weight: bold;
+      border-radius: 6px;
+    }
+
+    /* Completely removes the element from the page layout (takes up ZERO space) */
+    .remove-completely {
+      display: none;
+    }
+
+    /* Hides the element visually, but KEEPS its empty space in the layout */
+    .hide-keep-space {
+      visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+
+  <h2><code>display: none</code> vs <code>visibility: hidden</code></h2>
+
+  <h3>1. Using <code>display: none;</code> on Box 2 (Box 3 slides into Box 2's spot!)</h3>
+  <div class="row">
+    <div class="box">Box 1</div>
+    <div class="box remove-completely">Box 2 (display: none)</div>
+    <div class="box">Box 3</div>
+  </div>
+
+  <h3>2. Using <code>visibility: hidden;</code> on Box 2 (Box 2 is invisible, but its empty space remains!)</h3>
+  <div class="row">
+    <div class="box">Box 1</div>
+    <div class="box hide-keep-space">Box 2 (visibility: hidden)</div>
+    <div class="box">Box 3</div>
+  </div>
+
+</body>
+</html>

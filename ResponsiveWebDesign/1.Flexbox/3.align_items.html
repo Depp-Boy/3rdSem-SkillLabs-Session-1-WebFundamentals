@@ -1,0 +1,47 @@
+<!-- 3. align-items: Aligns flex items along the CROSS AXIS (vertical alignment in a row) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3. align-items (Cross Axis Alignment)</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 25px; }
+    .tall-container {
+      display: flex;
+      height: 140px; /* Tall container so we can clearly see vertical alignment! */
+      background-color: #e2e8f0;
+      border: 2px dashed #64748b;
+      padding: 10px;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    .item {
+      background-color: #8b5cf6;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2><code>align-items</code>: Aligns Items Along the Cross Axis</h2>
+
+  <h3>1. <code>align-items: stretch;</code> (Default - items stretch to fill the container height)</h3>
+  <div class="tall-container" style="align-items: stretch;">
+    <div class="item">Item A</div><div class="item">Item B</div><div class="item">Item C</div>
+  </div>
+
+  <h3>2. <code>align-items: center;</code> (Vertically centered inside the row)</h3>
+  <div class="tall-container" style="align-items: center;">
+    <div class="item">Item A</div><div class="item">Item B</div><div class="item">Item C</div>
+  </div>
+
+  <h3>3. <code>align-items: flex-start;</code> (Aligned at the top)</h3>
+  <div class="tall-container" style="align-items: flex-start;">
+    <div class="item">Item A</div><div class="item">Item B</div><div class="item">Item C</div>
+  </div>
+
+</body>
+</html>

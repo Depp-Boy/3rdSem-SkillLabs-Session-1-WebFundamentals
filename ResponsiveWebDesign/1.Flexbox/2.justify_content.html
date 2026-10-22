@@ -1,0 +1,51 @@
+<!-- 2. justify-content: Distributes flex items along the MAIN AXIS (horizontal in a row) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>2. justify-content (Main Axis Alignment)</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 25px; }
+    .box {
+      display: flex;
+      background-color: #e2e8f0;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 2px dashed #64748b;
+    }
+    .item {
+      background-color: #10b981;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      margin: 0 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2><code>justify-content</code>: Distributes Items Along the Main Axis</h2>
+
+  <h3>1. <code>justify-content: flex-start;</code> (Default - packed at the start)</h3>
+  <div class="box" style="justify-content: flex-start;">
+    <div class="item">One</div><div class="item">Two</div><div class="item">Three</div>
+  </div>
+
+  <h3>2. <code>justify-content: center;</code> (Centered in the row)</h3>
+  <div class="box" style="justify-content: center;">
+    <div class="item">One</div><div class="item">Two</div><div class="item">Three</div>
+  </div>
+
+  <h3>3. <code>justify-content: space-between;</code> (First at start, last at end, equal space between)</h3>
+  <div class="box" style="justify-content: space-between;">
+    <div class="item">Logo</div><div class="item">Nav Links</div><div class="item">Login Button</div>
+  </div>
+
+  <h3>4. <code>justify-content: space-around;</code> (Equal space around every item)</h3>
+  <div class="box" style="justify-content: space-around;">
+    <div class="item">One</div><div class="item">Two</div><div class="item">Three</div>
+  </div>
+
+</body>
+</html>
