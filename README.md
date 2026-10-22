@@ -30,7 +30,7 @@ Some resources which might help you:
 
 There is no limit to what you can learn. So keep learning as much as possible and developing your skills.
 
-If you have any doubts or want to collaborate on any projects or just simply want to connect then here's are LinkedIN profiles:
+If you have any doubts or want to collaborate on any projects or just simply want to connect then here's our LinkedIn profiles:
 - Arya Shetty - https://www.linkedin.com/in/arya-shetty-7aaa48331/
 - Manyashree S - https://www.linkedin.com/in/manyashree-s-828760356/
 - Parinitha M - https://www.linkedin.com/in/parinitha-m-b8132b377/
