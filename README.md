@@ -1,4 +1,4 @@
-# 3rdSem-SkillLabs-Session-1 - Introduction to Web Development
+# 3rdSem-SkillLabs-Session-1 - Web Fundamentals
 
 Concepts covered:
 1. Intro to WebDev
