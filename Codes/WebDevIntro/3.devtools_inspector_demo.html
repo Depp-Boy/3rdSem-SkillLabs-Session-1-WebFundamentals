@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browser Developer Tools Playground</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 30px;
+      line-height: 1.6;
+    }
+    .playground-card {
+      max-width: 700px;
+      margin: auto;
+      background-color: white;
+      border: 3px solid #0066cc;
+      border-radius: 10px;
+      padding: 25px;
+    }
+    .secret-heading {
+      color: #d9534f;
+      font-size: 28px;
+    }
+    .editable-box {
+      background-color: #e6f2ff;
+      padding: 20px;
+      border- dashed 2px #0066cc;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="playground-card">
+    <h1 class="secret-heading">Inspect Me with Developer Tools!</h1>
+    <p>Browser Developer Tools allow you to inspect and debug HTML and CSS live in the browser without changing your actual source file.</p>
+
+    <div class="editable-box">
+      <h3>Try these 3 quick experiments using Inspect (F12):</h3>
+      <ol>
+        <li><strong>Elements Tab (HTML):</strong> Right-click the red heading above, choose <strong>Inspect</strong>, double-click the text inside the <code>&lt;h1&gt;</code> tag, and change it to your own name!</li>
+        <li><strong>Styles Pane (CSS):</strong> In the Styles panel on the right, find <code>.secret-heading</code> and change <code>color: #d9534f;</code> to <code>color: green;</code>.</li>
+        <li><strong>Box Model Inspector:</strong> Scroll to the bottom of the Styles panel to see the rectangular Box Model diagram showing this card's exact content size, padding (<code>25px</code>), and border (<code>3px</code>).</li>
+      </ol>
+    </div>
+  </div>
+
+</body>
+</html>

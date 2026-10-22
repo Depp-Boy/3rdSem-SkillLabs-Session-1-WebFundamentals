@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full-Stack Application Layers Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 30px;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 850px;
+      margin: auto;
+    }
+    .layer-card {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+      border-left: 6px solid #0066cc;
+    }
+    .backend-card {
+      border-left-color: #28a745;
+    }
+    .db-card {
+      border-left-color: #fd7e14;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: bold;
+      color: white;
+      background-color: #0066cc;
+      margin-bottom: 10px;
+    }
+    .demo-area {
+      background: #eef6ff;
+      padding: 15px;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+    button {
+      padding: 8px 16px;
+      background-color: #0066cc;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button:hover {
+      background-color: #004999;
+    }
+    pre {
+      background: #282c34;
+      color: #61dafb;
+      padding: 12px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>How a Full-Stack Web Application Works</h1>
+    <p>Every web application is split into <strong>three core layers</strong>. Even inside the Front-End, HTML, CSS, and JavaScript each have a very specific job!</p>
+
+    <!-- LAYER 1: FRONT END -->
+    <div class="layer-card">
+      <span class="badge">Layer 1: Front End (Client Side)</span>
+      <h2>User Interface in the Browser</h2>
+      <p><strong>Role:</strong> Everything the user sees and clicks on directly inside the web browser.</p>
+      <ul>
+        <li><strong>HTML (Structure / Skeleton):</strong> Creates the heading, paragraph, and button below.</li>
+        <li><strong>CSS (Presentation / Styling):</strong> Gives this card its white background, blue border, and shadow.</li>
+        <li><strong>JavaScript (Behavior / Interactivity):</strong> Makes the button below respond when clicked!</li>
+      </ul>
+
+      <div class="demo-area">
+        <strong>Interactive Front-End Demo:</strong>
+        <p id="statusText">Click the button below to simulate requesting data from the Back End.</p>
+        <button onclick="simulateRequest()">Fetch Student Data from Server</button>
+      </div>
+    </div>
+
+    <!-- LAYER 2: BACK END -->
+    <div class="layer-card backend-card">
+      <span class="badge" style="background-color: #28a745;">Layer 2: Back End (Server Side)</span>
+      <h2>Application Logic, Authentication &amp; APIs</h2>
+      <p><strong>Role:</strong> Runs on a remote server computer. It checks if the user is logged in, processes business rules, and communicates with the database.</p>
+      <p><strong>Typical Technologies:</strong> Node.js, Express, Python (Django/Flask), Java (Spring).</p>
+      <pre><code id="serverLog">// Server Log: Waiting for client request...</code></pre>
+    </div>
+
+    <!-- LAYER 3: DATABASE -->
+    <div class="layer-card db-card">
+      <span class="badge" style="background-color: #fd7e14;">Layer 3: Database (Storage Layer)</span>
+      <h2>Persistent Data Storage</h2>
+      <p><strong>Role:</strong> Permanently stores and retrieves application data (student profiles, passwords, course records).</p>
+      <p><strong>Typical Technologies:</strong> MySQL, PostgreSQL (Relational) or MongoDB (NoSQL).</p>
+      <pre><code id="dbRecord">{
+  "usn": "1RV23CS052",
+  "name": "Arya",
+  "course": "Full Stack Development Skill Lab",
+  "semester": 3
+}</code></pre>
+    </div>
+  </div>
+
+  <script>
+    function simulateRequest() {
+      const status = document.getElementById('statusText');
+      const serverLog = document.getElementById('serverLog');
+      status.innerHTML = "⏳ <strong>Step 1:</strong> Browser sent HTTP GET request to Server...";
+      serverLog.textContent = "GET /api/student/052 -> Processing request & querying Database...";
+
+      setTimeout(() => {
+        serverLog.textContent = "200 OK -> Database returned record. Sending JSON response back to Browser!";
+        status.innerHTML = "✅ <strong>Step 2 (Rendered):</strong> Welcome <strong>Arya (1RV23CS052)</strong> - Enrolled in <em>Full Stack Development Skill Lab</em>!";
+      }, 900);
+    }
+  </script>
+
+</body>
+</html>
