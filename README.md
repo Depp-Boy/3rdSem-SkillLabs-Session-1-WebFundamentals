@@ -1,12 +1,19 @@
-# 3rdSem-SkillLabs-Session-1
+# 3rdSem-SkillLabs-Session-1 - Introduction to Web Development
+
+Concepts covered:
+1. Intro to WebDev
+2. HTML
+3. CSS
+4. Responsive Web Design
+5. Git & GitHub
+
 
 VERY IMPORTANT
 Complete the exercises in your lab manual before 25th Oct, 2026.
-Exericse-1 -- Pg no. 13 - HTML Exercise
-Exercise-2 -- Pg no. 16 - HTML+CSS+ResponsiveDesign Exercise
-Exercise-3 -- Pg no. 18 - IntegratedGitLab Exercise
-
-Skill Assessment Activity -- pg no.19
+- Exericse-1 -- Pg no. 13 - HTML Exercise
+- Exercise-2 -- Pg no. 16 - HTML+CSS+ResponsiveDesign Exercise
+- Exercise-3 -- Pg no. 18 - IntegratedGitLab Exercise
+- Skill Assessment Activity -- pg no.19
 
 
 All concepts are very important. Please read through them and execute the code and understand how each tag works.
